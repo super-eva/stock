@@ -4,6 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 import datetime
+import os
 
 app = Flask(__name__)
 
@@ -38,5 +39,8 @@ def get_interest(num):
 
     return result
 
-if __name__== '__main__' :
-    app.run()
+if __name__ == "__main__":
+    app.run(
+        host="0.0.0.0",
+        port=int(os.environ.get("PORT", 5000))
+    )

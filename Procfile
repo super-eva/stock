@@ -1,0 +1,1 @@
+web: python interest.py
